@@ -44,3 +44,5 @@ liga
 
  |
 
+Se decidió anidar el elemento <estadisticas> dentro de los nodos <equipoLocal> y <equipoVisitante> siguiendo el diagrama jerárquico propuesto. Este diseño ofrece las siguientes ventajas:   Es más comprensible: Agrupa lógicamente los datos bajo la entidad que los generó (el equipo en lugar del partido completo).
+ Reduce duplicación: Permite reutilizar las mismas etiquetas (ej. <goles>, <tarjetasAmarillas>) para ambos equipos sin necesidad de inventar y duplicar variantes con sufijos como <golesLocal> y <golesVisitante>.   Facilita el procesamiento: Al analizar el documento DOM o consultar con XPath, es mucho más directo iterar sobre un nodo de equipo y extraer sus hijos, manteniendo el contexto de a quién pertenecen los datos.   Permite agregar estadísticas fácilmente: Si en el futuro se requieren nuevas métricas (como <posesion> o <tiros>), solo se añade la nueva etiqueta dentro de la definición compartida de estadisticas y esta aplicará automáticamente de forma estandarizada para ambos equipos. 
