@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE liga SYSTEM "../dtd/resultados.dtd">
+<liga nombre="Liga MX" temporada="Apertura 2026">
+    <jornada numero="10" fecha="2026-09-27">
+
+        <!-- Partido 1: Pumas vs Atlético San Luis -->
+        <partido id="P001" estado="Finalizado">
+            <estadio>Estadio Olímpico Universitario</estadio>
+            <equipoLocal nombre="Pumas UNAM">
+                <estadisticas>
+                    <goles>2</goles>
+                    <tarjetasAmarillas>1</tarjetasAmarillas>
+                    <tarjetasRojas>0</tarjetasRojas>
+                </estadisticas>
+            </equipoLocal>
+            <equipoVisitante nombre="Atlético de San Luis">
+                <estadisticas>
+                    <goles>3</goles>
+                    <tarjetasAmarillas>2</tarjetasAmarillas>
+                    <tarjetasRojas>0</tarjetasRojas>
+                </estadisticas>
+            </equipoVisitante>
+            <marcador>2-3</marcador>
+        </partido>
+
+        <!-- Partido 2: León vs FC Juárez -->
+        <partido id="P002" estado="Finalizado">
+            <estadio>Estadio León</estadio>
+            <equipoLocal nombre="León">
+                <estadisticas>
+                    <goles>2</goles>
+                    <tarjetasAmarillas>2</tarjetasAmarillas>
+                    <tarjetasRojas>0</tarjetasRojas>
+                </estadisticas>
+            </equipoLocal>
+            <equipoVisitante nombre="FC Juárez">
+                <estadisticas>
+                    <goles>1</goles>
+                    <tarjetasAmarillas>2</tarjetasAmarillas>
+                    <tarjetasRojas>0</tarjetasRojas>
+                </estadisticas>
+            </equipoVisitante>
+            <marcador>2-1</marcador>
+        </partido>
+
+        <!-- Partido 3: Necaxa vs América -->
+        <partido id="P003" estado="Finalizado">
+            <estadio>Estadio Victoria Aguascalientes</estadio>
+            <equipoLocal nombre="Necaxa">
+                <estadisticas>
+                    <goles>2</goles>
+                    <tarjetasAmarillas>3</tarjetasAmarillas>
+                    <tarjetasRojas>0</tarjetasRojas>
+                </estadisticas>
+            </equipoLocal>
+            <equipoVisitante nombre="América">
+                <estadisticas>
+                    <goles>4</goles>
+                    <tarjetasAmarillas>2</tarjetasAmarillas>
+                    <tarjetasRojas>0</tarjetasRojas>
+                </estadisticas>
+            </equipoVisitante>
+            <marcador>2-4</marcador>
+        </partido>
+
+    </jornada>
+</liga>
