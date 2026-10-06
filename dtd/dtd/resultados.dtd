@@ -1,33 +1,35 @@
-<!ELEMENT liga (jornada+)>
-        <!ATTLIST liga
-                nombre CDATA #REQUIRED
-                temporada CDATA #REQUIRED>
-
+<!-- Definición de elementos -->
+        <!ELEMENT liga (jornada+)>
         <!ELEMENT jornada (partido+)>
-        <!ATTLIST jornada
-                numero CDATA #REQUIRED
-                fecha CDATA #REQUIRED>
-
-        <!-- Un partido debe respetar estrictamente esta secuencia de elementos -->
         <!ELEMENT partido (estadio, equipoLocal, equipoVisitante, marcador)>
-        <!ATTLIST partido
-                id ID #REQUIRED
-                estado (Programado|En_curso|Finalizado) #REQUIRED>
-
         <!ELEMENT estadio (#PCDATA)>
-
         <!ELEMENT equipoLocal (estadisticas?)>
-        <!ATTLIST equipoLocal
-                nombre CDATA #REQUIRED>
-
         <!ELEMENT equipoVisitante (estadisticas?)>
-        <!ATTLIST equipoVisitante
-                nombre CDATA #REQUIRED>
-
-        <!-- Las estadísticas pertenecen a cada equipo para mayor claridad y modularidad -->
         <!ELEMENT estadisticas (goles, tiros?, tarjetasAmarillas?, tarjetasRojas?)>
         <!ELEMENT goles (#PCDATA)>
         <!ELEMENT tiros (#PCDATA)>
         <!ELEMENT tarjetasAmarillas (#PCDATA)>
         <!ELEMENT tarjetasRojas (#PCDATA)>
         <!ELEMENT marcador (#PCDATA)>
+
+        <!-- Definición de atributos (Actividad 6) -->
+        <!ATTLIST liga
+                nombre CDATA #REQUIRED
+                temporada CDATA #REQUIRED>
+
+        <!ATTLIST jornada
+                numero CDATA #REQUIRED
+                fecha CDATA #REQUIRED>
+
+        <!-- "id" utiliza el tipo ID para obligar a que sea único.
+             "asistencia" utiliza #IMPLIED por si no se conoce la cifra del público. -->
+        <!ATTLIST partido
+                id ID #REQUIRED
+                estado (Programado|En_curso|Finalizado) #REQUIRED
+                asistencia CDATA #IMPLIED>
+
+        <!ATTLIST equipoLocal
+                nombre CDATA #REQUIRED>
+
+        <!ATTLIST equipoVisitante
+                nombre CDATA #REQUIRED>
