@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE liga SYSTEM "../dtd/resultados.dtd">
+<liga nombre="Liga MX" temporada="Apertura 2026">
+    <jornada numero="10" fecha="2026-09-27">
+
+        <!-- ERRORES 1, 2, 3 y 6 -->
+        <partido id="P004" estado="Finalizado">
+            <!-- Error 3: Orden incorrecto (marcador no debe ir al inicio) -->
+            <marcador>0-0</marcador>
+            <estadio>Estadio Azteca</estadio>
+
+            <equipoLocal nombre="Cruz Azul">
+                <estadisticas><goles>0</goles></estadisticas>
+            </equipoLocal>
+
+            <!-- Error 2: Dos equipos locales y Error 1: Ausencia de equipo visitante -->
+            <equipoLocal nombre="Toluca">
+                <estadisticas><goles>0</goles></estadisticas>
+            </equipoLocal>
+
+            <!-- Error 6: Elemento no declarado en el DTD -->
+            <arbitro>Marco Antonio Ortiz</arbitro>
+        </partido>
+
+        <!-- ERRORES 4 y 5 -->
+        <!-- Error 4: Falta el atributo obligatorio "estado" -->
+        <!-- Error 5: El atributo id "P001" ya fue utilizado en otro nodo, violando la regla ID -->
+        <partido id="P001">
+            <estadio>Estadio Akron</estadio>
+            <equipoLocal nombre="Chivas">
+                <estadisticas><goles>1</goles></estadisticas>
+            </equipoLocal>
+            <equipoVisitante nombre="Atlas">
+                <estadisticas><goles>1</goles></estadisticas>
+            </equipoVisitante>
+            <marcador>1-1</marcador>
+        </partido>
+
+    </jornada>
+</liga>
